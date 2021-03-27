@@ -16,7 +16,6 @@ const blog_details = (req, res) => {
             res.render('blogs/details', { blog: result, title: 'blog doc' });
         }).catch((err) => {
             console.log(err);
-            res.status(404).render('404', { title: 'blog not found' })
         })
 }
 
