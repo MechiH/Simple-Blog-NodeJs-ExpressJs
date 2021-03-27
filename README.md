@@ -1,4 +1,4 @@
 # Simple-Blog-NodeJs-ExpressJs
 ## How to use
-npm install
+npm install\n
 nodemon app
