@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../layouts/head.ejs') %>
+
+    <body>
+        <!-- <% const name='houssem' %> -->
+        <!-- <nav>
+            <div class="site-title"> -->
+        <!-- when we iuput to screen we add the = <%= %> -->
+        <!-- <p>
+                    <%= name%>
+                </p>
+                <a href="/">Blog Mch</a>
+                <p>An McH Site</p>
+            </div>
+            <ul>
+                <li><a href="/">Blogs</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/blogs/create">New Blog</a></li>
+            </ul>
+        </nav> -->
+        <!--! we use - sign coz = sign turns the special caractere into chars and we end up  with the string require-->
+        <%- include('../layouts/nav.ejs') %>
+            <div class="blogs content">
+                <h2>All Blogs</h2>
+                <%if (blogs.length> 0) { %>
+                    <% blogs.forEach(blog=>{ %>
+                        <a class="single" href="/blogs/<%= blog._id %> ">
+                            <h3 class="title">
+                                <%= blog.title %>
+                            </h3>
+                            <p class="snippet">
+                                <%= blog.snippet %>
+                            </p>
+                        </a>
+                        <% }) %>
+
+                            <% } else{%>
+                                <p>there are no blogs to display</p>
+                                <% } %>
+            </div>
+            <%- include('../layouts/footer.ejs') %>
+
+    </body>
+
+</html>
